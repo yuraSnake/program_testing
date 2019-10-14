@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 content" id="chapter_question_information">
+
+            <label>название вопроса</label><textarea id="question" th:text="${information.name}"></textarea><br />
+
+            <label>тематика</label><textarea id="theme" th:attr="value=${information.theme}"></textarea><br />
+
+            <div th:each="item,iter : ${information.answers}"><input th:if="${item.right} == true" type="radio" name="right" th:attr="value=${iter.index}+1" checked /><input th:unless="${item.right} == true" type="radio" name="right" th:attr="value=${iter.index}+1" /><textarea th:text="${item.name}"></textarea></div>
+
+            <input type="button" value="назад" id="questionBack" />
+
+        </div>
+    </div>
+</div>

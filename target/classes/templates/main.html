@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/webjars/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="/webjars/popper.js/1.14.1/umd/popper.js"></script>
+    <script src="/webjars/jquery/3.3.1/jquery.js"></script>
+    <script src="/webjars/bootstrap/4.1.1/js/bootstrap.js"></script>
+    <script src="/js/lavshuk.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 content" id="chapter_main">
+
+            <section id="section_test">
+                <h3>ТЕСТ</h3>
+                <input type="button" value="создать комбинированный тест" id="createTestWithTheme" /><br />
+                <input type="button" value="создать простой тест" id="createTest" /><br />
+                <input type="button" value="очистить все тесты" id="cleanAllTest" /><br />
+                <input type="button" value="создать файл ответов на тесты" id="createFileOfAnswersOnTest" /><br />
+                <input type="button" value="создать файл тестов" id="createFileOfTest" /><br />
+            </section>
+
+            <section id="section_question">
+                <h3>ВОПРОСЫ</h3>
+                <select id="listQuestion"><option th:each="question : ${questions}" th:text="${question.getName()}"></option></select><br />
+                <input type="button" value="создать вопрос" id="createQuestion" /><input type="text" id="countAnswer" placeholder="количество ответов" /><br/>
+                <input type="button" value="удалить вопрос" id="deleteQuestionFromArrayQuestion"><br />
+                <input type="button" value="показать информацию о вопросе" id="showQuestionInformation"><br />
+                <input type="button" value="сохранить вопросы в файл" id="saveArrayOfQuestionsToFile" /><br />
+                <input type="button" value="очистить все вопросы" id="cleanAllQuestion" /><br />
+            </section>
+
+            <section id="section_theme">
+                <h3>ТЕМАТИКА</h3>
+                <input type="button" value="создать тематику" id="createTheme" /><br />
+            </section>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

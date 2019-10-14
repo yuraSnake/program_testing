@@ -1,0 +1,26 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-6 content" id="chapter_hard_test">
+
+            <input type="button" id="addSetting" value="еще" /><br />
+
+            <input type="button" value="отправить" id="hardTestSendInformation" /><br />
+
+            <input type="button" value="назад" id="testBack" /><br />
+
+            <input id="numberOfTestHardTest" type="text" placeholder="номер теста" /><br />
+
+            <div class="block_setting" th:attr="id=0">
+                <input type="text" id="countQuestion" placeholder="количество вопросов" />
+                <select id="listTheme">
+                    <option th:each="item : ${themes}" th:text="${item.name}"></option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

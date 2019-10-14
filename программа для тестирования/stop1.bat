@@ -1,0 +1,1 @@
+stop lavshuk.jar

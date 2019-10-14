@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 content" id="chapter_question">
+
+            <textarea id="question" placeholder="содержание вопроса"></textarea><br />
+
+            <div th:each="item,iter : ${countAnswer}"><input name="right" th:attr="value=${iter.index}+1" type="radio" /><textarea class="A" th:attr="id=${iter.index}+1" placeholder="содержание ответа"></textarea></div>
+
+            <select id="listTheme"><option th:each="item : ${themes}" th:text="${item.name}"></option></select><br/>
+
+            <input type="button" value="отправить" id="sendArrayQuestion" /><br/>
+
+            <input type="button" value="назад" id="questionBack" />
+
+        </div>
+    </div>
+</div>

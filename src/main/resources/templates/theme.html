@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 content" id="chapter_theme">
+
+            <textarea id="nameOfTheme" placeholder="название тематики"></textarea><br/>
+
+            <div class="exist_theme">
+                <label>существующие темы</label>
+                <select id="listTheme">
+                    <option th:each="item : ${themes}" th:text="${item}"></option>
+                </select>
+            </div>
+
+            <input type="button" value="отправить" id="sendArrayTheme" /><br/>
+
+            <input type="button" value="назад" id="themeBack" />
+
+        </div>
+    </div>
+</div>
